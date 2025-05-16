@@ -106,29 +106,12 @@ function createCatCard(cat) {
     return catCard;
 }
 
-function toggleFavorite(catId) {
-    const catIndex = catsData.findIndex(cat => cat.id === catId);
-    
-    if (catIndex !== -1) {
-        catsData[catIndex].isFavorite = !catsData[catIndex].isFavorite;
-        renderCats();
-    }
-}
-
 function renderCats() {
     catsContainer.innerHTML = '';
     catsData.forEach(cat => {
         const catCard = createCatCard(cat);
         catsContainer.appendChild(catCard);
     });
-}
-
-function handleFavoriteClick(event) {
-    const catCard = event.target.closest('.cat-card');
-    if (catCard) {
-        const catId = Number(catCard.getAttribute('data-id'));
-        toggleFavorite(catId);
-    }
 }
 
 function init() {

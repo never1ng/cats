@@ -43,17 +43,6 @@ h1 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.cat-card.favorite::before {
-    content: '★';
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.8rem;
-    z-index: 1;
-    color: #F6A623;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
 .cat-image {
     position: relative;
     height: 200px;
